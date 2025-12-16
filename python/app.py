@@ -1,5 +1,6 @@
 from sign_validator import SignValidator
 from stack_sorter import StackSorter
+from queue_utils import QueueUtils
 
 def run_sign_validator():
     print("--- EJERCICIO 01: VALIDATOR ---")
@@ -27,7 +28,18 @@ def run_stack_sorter():
         print(f"Tope actual: {stack[-1]}")
     print()
 
+def run_queue_palindrome():
+    print("--- EJERCICIO 03: PALINDROMO QUEUE ---")
+    q_utils = QueueUtils()
+    
+    inputs = ["ana", "radar", "java"]
+    
+    for word in inputs:
+        print(f"Input: {word} \t| Es palindromo? {q_utils.is_palindrome(word)}")
+    print()
+
 if __name__ == "__main__":
     run_sign_validator()
     run_stack_sorter()
+    run_queue_palindrome()
     

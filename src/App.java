@@ -1,5 +1,6 @@
 import java.util.Stack;
 
+import Utils.QueueUtils;
 import Utils.SignValidator;
 import Utils.StackSorter;
 
@@ -8,6 +9,7 @@ public class App {
     public static void main(String[] args){
         runSignValidator();
         runStackSorter();
+        runQueuePalindrome();
     }
 
     private static void runSignValidator() {
@@ -38,6 +40,20 @@ public class App {
 
         System.out.println("Stack Ordenado (Tope a Fondo): " + stack);
         System.out.println("Tope actual: " + stack.peek());
+        System.out.println();
+    }
+
+    private static void runQueuePalindrome() {
+        System.out.println("--- EJERCICIO 03: PALINDROMO QUEUE ---");
+        QueueUtils queueUtils = new QueueUtils();
+
+        String p1 = "ana";
+        String p2 = "radar";
+        String p3 = "java";
+
+        System.out.println("Input: " + p1 + " | Es palindromo? " + queueUtils.isPalindrome(p1));
+        System.out.println("Input: " + p2 + " | Es palindromo? " + queueUtils.isPalindrome(p2));
+        System.out.println("Input: " + p3 + " | Es palindromo? " + queueUtils.isPalindrome(p3));
         System.out.println();
     }
 }
