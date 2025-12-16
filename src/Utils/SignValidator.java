@@ -7,7 +7,7 @@ public class SignValidator {
     public boolean isValid(String signos){
 
         Stack<Character> stack = new Stack<Character>();
-
+        
         char[] caracteres = signos.toCharArray();
         for (Character character : caracteres){
             // character -> (
